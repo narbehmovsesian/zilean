@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class User_classes extends Model
 {
+    protected $dates = ['date_taken'];
+
     protected $fillable = [
         'user_id',
         'class_id',
@@ -22,4 +24,5 @@ class User_classes extends Model
     {
         return $this->belongsTo('App\classes');
     }
+
 }

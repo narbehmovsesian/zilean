@@ -1,6 +1,7 @@
 @extends('app')
 @section('content')
 
+
     {!! Form::open(['url' => 'addClass']) !!}
 
     <div class="row">
@@ -31,7 +32,7 @@
                     {!! Form::label('date_taken', 'Date Taken') !!}
                 </div>
                 <div class="col-sm-3">
-                    {!! Form::text('date_taken', null, [ 'class'=>'form-control']) !!}
+                    {!! Form::text('date_taken', null, [ 'id' => 'date_taken_input' , 'class'=>'form-control']) !!}
                     {{ ($errors->has('date_taken') ? $errors->first('date_taken') : '') }}
                 </div>
             </div>
@@ -53,4 +54,5 @@
         </div>
     </div>
     {!! Form::close() !!}
+
 @stop
